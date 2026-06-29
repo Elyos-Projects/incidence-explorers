@@ -1,0 +1,37 @@
+{
+  "id": "incidence-explorers-explainer-013",
+  "title": "Pilot cancer-site explainer (provenanced, 'not medical advice,' verified helplines) — oncologist + advocate signed off",
+  "project": "incidence-explorers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "epidemiology", "statistics", "health-literacy", "writing"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "This is the flagship patient-facing explainer for the pilot cancer site selected in incidence-explorers-site-002. Any content that a patient or family member reads about a specific cancer is HIGH risk-tier and requires sign-off from a credentialed oncologist AND a patient advocate before it ships — no sign-off, no ship. The explainer must carry persistent 'general education, not medical advice — talk to your care team' framing and use verified, dated crisis/helpline references from incidence-explorers-helplines-014. No partner, oncologist, or advocate is yet secured.",
+  "objective": "Write the pilot cancer-site explainer: every quantitative claim cites its DataPoint (provenance complete); persistent 'general education, not medical advice — talk to your care team' framing throughout; no diagnosis/prognosis/individual-risk/screening/treatment guidance; content-safety lint passes; crisis/helpline references use the verified, dated entries from incidence-explorers-helplines-014 and are region-appropriate. The explainer must be signed off by a credentialed oncologist AND a patient advocate (version-scoped, recorded in the reviewers ledger) before it ships — blocking.",
+  "acceptanceCriteria": [
+    "Every quantitative claim in the explainer cites its DataPoint with a complete, resolvable provenance record (source, release, query params, extraction date, URL/DOI, license, age-standard, measure); no uncited claim is present",
+    "Persistent 'general education, not medical advice — talk to your care team' framing is present on every patient-facing surface; no diagnosis, prognosis, individual-risk, screening, or treatment guidance is included",
+    "Content-safety lint passes: 0 advice/diagnosis/prognosis/individual-risk phrasings",
+    "Crisis/helpline references use the verified, dated entries from incidence-explorers-helplines-014 and are region-appropriate and current",
+    "Signed off by a credentialed oncologist AND a patient advocate (version-scoped, with credentials and consent recorded in the reviewers ledger) before the explainer ships — this is a hard blocking gate",
+    "Plain-language readability target (~grade 8) met and a plain-language review passed"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-stats-spec-004.json",
+    "tasks/incidence-explorers-validate-008.json",
+    "tasks/incidence-explorers-dashboard-010.json",
+    "tasks/incidence-explorers-literacy-012.json",
+    "tasks/incidence-explorers-helplines-014.json"
+  ],
+  "output": "A published pilot cancer-site explainer — fully provenanced, 'not medical advice'-framed, with verified helplines, passing the content-safety lint and plain-language review, and signed off by a credentialed oncologist AND a patient advocate (version-scoped, recorded) — the first patient-facing deed of the project.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

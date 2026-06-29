@@ -1,0 +1,34 @@
+{
+  "id": "incidence-explorers-suppression-005",
+  "title": "Suppression / re-identification guard (honour <16, block small-cell reconstruction, fail-closed)",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance", "software", "privacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Incidence-Explorers uses aggregate, de-identified cancer statistics. Cancer registries suppress small-cell values (typically counts based on fewer than 16 cases) to protect patient privacy. The project must honour all upstream suppression, never display suppressed values, and block any aggregation or cross-tabulation that could reconstruct a suppressed cell through differencing or complementary-cell attacks. This guard is fail-closed: unknown or near-threshold cell sizes are suppressed. This task implements the suppression/re-identification guard specified in incidence-explorers-governance-001 and the repo skeleton from incidence-explorers-repo-003.",
+  "objective": "Implement the suppression and re-identification guard in lib/governance: honour upstream suppression markers (e.g. SEER/USCS counts based on fewer than 16 cases); refuse to display suppressed values; block aggregations and cross-tabulations that could reconstruct a suppressed cell via differencing or complementary-cell attacks; and fail-closed when the underlying count is unknown or near the suppression threshold. Include unit tests covering both the display block and the reconstruction-block paths.",
+  "acceptanceCriteria": [
+    "Upstream suppression markers (e.g. SEER/USCS <16 case counts) are honoured: suppressed values are never displayed or passed downstream",
+    "Aggregations and cross-tabulations that could reconstruct a suppressed cell (differencing attack, complementary-cell attack) are blocked at the guard boundary",
+    "The guard is fail-closed: when the underlying cell count is unknown or near the suppression threshold, the value is suppressed rather than displayed",
+    "Unit tests cover: (1) a suppressed upstream value is blocked from rendering; (2) an aggregation that would reconstruct a suppressed cell is blocked; (3) fail-closed behaviour for unknown/near-threshold counts",
+    "CI is green (build/test/lint); no suppressed or re-identifiable value can reach the rendering layer",
+    "Reviewed and signed off by the Data-governance reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A merged PR implementing the suppression/re-identification guard (lib/governance) with unit tests covering the display-block and reconstruction-block paths, and green CI — enforcing the data-boundary specified in incidence-explorers-governance-001.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

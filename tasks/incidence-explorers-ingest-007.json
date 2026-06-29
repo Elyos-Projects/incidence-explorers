@@ -1,0 +1,36 @@
+{
+  "id": "incidence-explorers-ingest-007",
+  "title": "Aggregate ingestion for pilot site (SEER*Explorer + GLOBOCAN [+USCS]) with full provenance",
+  "project": "incidence-explorers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance", "statistics", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "With the pilot cancer site selected (incidence-explorers-site-002), the data-governance spec approved (incidence-explorers-governance-001), the suppression guard implemented (incidence-explorers-suppression-005), and licenses verified (incidence-explorers-license-006), the project can ingest aggregate statistics for the pilot site from allow-listed sources. Every DataPoint must carry a complete provenance record. Upstream suppression must be honoured end-to-end. GLOBOCAN points must be flagged as modelled estimates. No controlled-access or individual-level source may be used.",
+  "objective": "Ingest aggregate incidence (and mortality/survival where published) statistics for the pilot cancer site from allow-listed sources (SEER*Explorer, GLOBOCAN/GCO if enabled, USCS) into the provenance store. Every DataPoint must carry a complete provenance record: source, dataset release/version, exact query parameters (cancer site, sex, race/ethnicity grouping, year/period, age-standard, measure), extraction date, URL/DOI, license, age-standard, measure. GLOBOCAN DataPoints must be flagged as modelled estimates with uncertainty. Upstream suppression must be honoured end-to-end so no suppressed or <16-case value enters the dataset.",
+  "acceptanceCriteria": [
+    "Ingests only allow-listed aggregate tables for the pilot site (incidence, plus mortality/survival where published in the allow-listed sources); zero controlled-access or individual-level sources used (allow-list test green)",
+    "Every DataPoint carries a complete provenance record: source, dataset release/version, exact query parameters, extraction date, URL/DOI, license, age-standard, measure",
+    "GLOBOCAN DataPoints are explicitly flagged as modelled estimates with uncertainty, not exact counts",
+    "Upstream suppression is honoured end-to-end: no suppressed or <16-case value enters the dataset; the suppression guard (incidence-explorers-suppression-005) tests pass against the ingested data",
+    "Provenance-coverage test passes: 100% of DataPoints resolve to a Source; a DataPoint without a source fails the CI gate",
+    "Reviewed and signed off by the Data-governance reviewer and Statistics reviewer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-governance-001.json",
+    "tasks/incidence-explorers-site-002.json",
+    "tasks/incidence-explorers-suppression-005.json",
+    "tasks/incidence-explorers-license-006.json"
+  ],
+  "output": "An ingested, provenanced dataset of aggregate cancer statistics for the pilot site (incidence + mortality/survival where available), with full provenance records on every DataPoint, GLOBOCAN estimates flagged, suppression honoured, and provenance-coverage + allow-list CI tests green — the data layer for incidence-explorers-validate-008, incidence-explorers-stats-009, and incidence-explorers-dashboard-010.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "incidence-explorers-stats-009",
+  "title": "Statistics-correctness layer: typed measures, age-standard + comparability guard, CI/estimate uncertainty",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "health-literacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "With the pilot site's aggregate data ingested and validated (incidence-explorers-ingest-007, incidence-explorers-validate-008) and the statistical-honesty spec written (incidence-explorers-stats-spec-004), the project can implement the statistics-correctness layer (lib/stats). This layer enforces typed measures, the age-standardisation comparability guard, and CI/estimate-uncertainty handling so that dashboards and explainers cannot display misleading statistics — a core product feature, not an afterthought.",
+  "objective": "Implement the statistics-correctness layer (lib/stats) as specified in incidence-explorers-stats-spec-004: typed Measure (incidence/mortality/prevalence/survival), CountOrRate, AgeStandard, and uncertainty types; a comparability guard that refuses to co-plot series with incompatible measures or age-standardisation standards on the same axis without an explicit labelled caveat; and CI/estimate-uncertainty handling that renders GLOBOCAN as modelled estimates with uncertainty, never as exact counts, and shows CIs where the source publishes them.",
+  "acceptanceCriteria": [
+    "Typed Measure (incidence/mortality/prevalence/survival), CountOrRate, AgeStandard (e.g. US 2000 Standard, World Segi/Doll), and uncertainty types are implemented in lib/stats",
+    "The comparability guard refuses to co-plot two series with incompatible measures or incompatible age-standardisation standard populations on the same axis unless an explicit labelled caveat is provided; this is enforced at the library boundary and tested",
+    "GLOBOCAN DataPoints are rendered as modelled estimates with uncertainty, never as exact counts; CIs are shown where the source publishes them; short-term trend use of GLOBOCAN estimates is blocked or clearly caveated",
+    "All typed-measure and comparability-guard logic has unit tests; the statistics-correctness layer is tested independently of the dashboard layer",
+    "CI is green (build/test/lint); reviewed and signed off by the Statistics reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-stats-spec-004.json",
+    "tasks/incidence-explorers-ingest-007.json"
+  ],
+  "output": "A merged PR implementing the statistics-correctness layer (lib/stats) with typed measures, the age-standardisation comparability guard, and CI/estimate-uncertainty handling — the foundation for incidence-explorers-dashboard-010 (accessible dashboards) and incidence-explorers-eval-011 (eval gates).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

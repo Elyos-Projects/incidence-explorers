@@ -1,0 +1,33 @@
+{
+  "id": "incidence-explorers-validate-008",
+  "title": "Upstream validation: ingested values match the source tool within tolerance + provenance-coverage test",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance", "statistics", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The ingestion task (incidence-explorers-ingest-007) produces a provenanced dataset for the pilot site. Before any dashboard or explainer can use those numbers, they must be validated against the upstream published tools (SEER*Explorer, GLOBOCAN/GCO) to confirm accuracy. Discrepancies must be investigated, not silently accepted. A provenance-coverage CI gate must also be wired in: every DataPoint must resolve to a Source or the build fails.",
+  "objective": "Implement an upstream validation suite that (1) compares ingested DataPoint values against the upstream source tool (SEER*Explorer / GCO) within a documented numerical tolerance, flags and investigates any discrepancy rather than accepting it silently, and (2) adds a provenance-coverage CI gate: 100% of DataPoints must resolve to a Source — a DataPoint with no resolvable Source fails CI ('no source, no render'). Both checks must be wired into CI.",
+  "acceptanceCriteria": [
+    "Ingested values are compared against the upstream tool (SEER*Explorer / GCO) within a documented tolerance; each comparison is recorded with source, value, upstream value, and delta",
+    "Any discrepancy outside the documented tolerance is flagged as a test failure and investigated before being accepted; discrepancies are not silently ignored",
+    "Provenance-coverage CI gate: 100% of DataPoints in the ingested dataset resolve to a Source record; a DataPoint without a resolvable Source fails CI",
+    "Both the upstream-validation suite and the provenance-coverage gate run in CI and fail the build on failure",
+    "Reviewed and signed off by the Statistics reviewer and Data-governance reviewer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-ingest-007.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A merged PR implementing the upstream validation suite and the provenance-coverage CI gate, with green CI — ensuring ingested values are accurate against the upstream tool and every statistic has a resolvable source before it can render.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

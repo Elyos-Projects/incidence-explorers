@@ -1,0 +1,34 @@
+{
+  "id": "incidence-explorers-ops-018",
+  "title": "Ops runbook + data-refresh cadence (re-ingest/re-validate/re-sign-off) + outcomes dashboard",
+  "project": "incidence-explorers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "data-governance", "health-literacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the deed is delivered (incidence-explorers-handoff-017), the project needs a durable maintenance structure: a named rotation, a data-refresh cadence tied to upstream releases (SEER, GLOBOCAN, USCS update periodically), and an outcomes dashboard tracking comprehension and adoption — not pageviews. Cancer registry data lags by years and must be refreshed and re-validated on each upstream release. Any changed HIGH-tier patient-facing content must be re-signed-off by the oncologist and advocate (version-scoped sign-off does not carry forward). A gated process for adding the next cancer site must also be documented.",
+  "objective": "Write the ops runbook covering: deploy process; the data-release refresh cycle (re-ingest on SEER/GLOBOCAN/USCS release, re-validate against the upstream tool, re-date provenance, re-verify helplines, re-run all eval gates); re-sign-off of changed HIGH-tier content (version-scoped sign-off does not carry forward); named maintenance rotation with ownership documented; and a gated, expert-reviewed process for adding the next cancer site. Implement the outcomes dashboard tracking comprehension improvement and partner adoption.",
+  "acceptanceCriteria": [
+    "The ops runbook covers deploy, the data-release refresh cycle (re-ingest, re-validate, re-date provenance, re-verify helplines, re-run all eval gates on each upstream SEER/GLOBOCAN/USCS release), and re-sign-off of any changed HIGH-tier content",
+    "The runbook explicitly states that version-scoped expert sign-off does not carry forward to edits — changed patient-facing content requires a new sign-off before it ships",
+    "A named maintenance rotation with documented ownership is established",
+    "An outcomes dashboard tracks comprehension improvement and partner adoption (not pageviews); it is operational and reviewed on the maintenance cadence",
+    "A documented, expert-gated process for adding the next cancer site is included",
+    "Reviewed and signed off by the Maintainer, Steward, and Expert (oncologist + advocate) (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-handoff-017.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A reviewed ops runbook (deploy, data-refresh cadence, re-sign-off rules, maintenance rotation, expansion process) and an operational outcomes dashboard tracking comprehension/adoption — sustaining the project post-delivery with expert-gated guardrails maintained on the refresh cycle.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "incidence-explorers-site-002",
+  "title": "Pilot cancer site/topic selection (scored against explicit criteria) — gates M1–M6",
+  "project": "incidence-explorers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "data-governance", "health-literacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Incidence-Explorers builds plain-language, accessible dashboards and explainers from aggregate, open-access, de-identified cancer-incidence statistics. Before any data ingestion or content work can begin for milestones M1–M6, the pilot cancer site/topic must be chosen. The selection is gated by explicit criteria and a fixed decision deadline of 2026-08-31. No partner organisation, beneficiary, or oncologist/advocate reviewer is yet secured.",
+  "objective": "Evaluate and select a pilot cancer site/topic by scoring all candidates against the four explicit criteria: (1) high public-misinterpretation value (screening-artifact / survival-misread prone); (2) data availability in allow-listed aggregate sources without forcing small cells; (3) an available oncologist + advocate reviewer for that site; (4) tractable statistical complexity for a first build. Record the decision (or a shortlist with the fixed 2026-08-31 decision deadline) with full rationale so that M1 ingestion and M3 content build against the right corpus and reviewer profile.",
+  "acceptanceCriteria": [
+    "Candidate cancer sites/topics are enumerated and each scored against the four explicit criteria: public-misinterpretation value, data availability in allow-listed aggregate sources without small-cell issues, reviewer availability (oncologist + advocate for that site), and tractable statistical complexity",
+    "A single pilot site is selected (or a shortlist recorded with the fixed 2026-08-31 decision deadline and the tiebreaker process) with full written rationale",
+    "The decision document identifies the data corpus (SEER*Explorer, GLOBOCAN/GCO, USCS tables) for the chosen site and flags any known small-cell or suppression risks",
+    "The decision document identifies the required oncologist and patient-advocate reviewer profile for the chosen site",
+    "Reviewed and signed off by the Maintainer and Statistics reviewer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A decision document recording the selected pilot cancer site (or shortlist with decision deadline), scored criteria, rationale, the data corpus for M1 ingestion, and the required oncologist + advocate reviewer profile — gates milestones M1 through M6.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

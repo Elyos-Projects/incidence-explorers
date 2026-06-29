@@ -1,0 +1,32 @@
+{
+  "id": "incidence-explorers-helplines-014",
+  "title": "Crisis/helpline reference set: verified against official sources, region-appropriate, dated",
+  "project": "incidence-explorers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "health-literacy", "data-governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The pilot cancer-site explainer (incidence-explorers-explainer-013) may need crisis, distress, or cancer-support helpline references. Any such information must be verified against the official source, region-appropriate, and dated (lastVerified) before inclusion. An unverified or stale entry must be withheld. This is a HIGH-risk data task because incorrect or stale helpline information could harm a distressed person in a cancer context. No partner, oncologist, or advocate is yet secured to review this set.",
+  "objective": "Compile and verify a crisis/helpline reference set for inclusion in the pilot cancer-site explainer: each helpline entry is verified against its official source (not secondary lists), is region/language-appropriate for the target audience, carries a lastVerified date, and is reviewed by the patient advocate (and oncologist where clinically relevant). Entries that cannot be verified against the official source or that are out of region/language are withheld.",
+  "acceptanceCriteria": [
+    "Each helpline entry is verified against its official source (not a secondary listing); the verification source URL and method are recorded",
+    "Each entry carries a lastVerified date stamp",
+    "Entries are region-appropriate and language-appropriate for the intended audience; a US-only helpline is not presented to non-US readers without a region flag",
+    "Unverified, stale, or out-of-region entries are withheld from the published set",
+    "Reviewed by the patient advocate (and oncologist where clinically relevant) and signed off (recorded in the reviewers ledger) before the set ships — blocking gate for incidence-explorers-explainer-013"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-site-002.json"
+  ],
+  "output": "A verified, dated crisis/helpline reference dataset with each entry confirmed against its official source, region-appropriate, and carrying a lastVerified date — reviewed and signed off by the patient advocate — for use in incidence-explorers-explainer-013 and any subsequent patient-facing content.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

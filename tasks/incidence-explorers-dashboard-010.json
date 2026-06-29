@@ -1,0 +1,35 @@
+{
+  "id": "incidence-explorers-dashboard-010",
+  "title": "Accessible dashboards (WCAG 2.2 AA): chart + text-table + ARIA, inline caveats from the matrix",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "health-literacy", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "With the statistics-correctness layer implemented (incidence-explorers-stats-009), the project can build accessible dashboards for the pilot site. Accessibility is a core acceptance criterion — the intended beneficiaries include assistive-technology users — and statistical caveats are a product feature built into each figure. No chart renders a suppressed or unprovenanced value. This task does not include patient-facing explainer content (HIGH-tier, handled in M3).",
+  "objective": "Build accessible dashboards (app/) for the pilot site's aggregate statistics: each chart ships with an equivalent data table, ARIA labelling, keyboard navigation, and sufficient contrast (charts are never the sole representation). Inline caveats from the per-figure caveat matrix (counts-vs-rates, age-standardisation + standard pop, CI/estimate uncertainty, screening artifact where relevant, registry lag) are shown on every figure. No suppressed or unprovenanced value renders. WCAG 2.2 AA compliance is verified by automated scan and manual assistive-technology testing.",
+  "acceptanceCriteria": [
+    "Every chart ships with an equivalent text data table and ARIA labelling; charts are never the only representation of the data",
+    "Keyboard navigation works on all dashboard interactive elements; colour contrast meets WCAG 2.2 AA",
+    "Each figure shows its mandatory caveats from the per-figure caveat matrix (counts-vs-rates, age-standardisation + standard population, CI/estimate uncertainty, screening artifact where relevant, registry lag/data vintage)",
+    "No suppressed or unprovenanced value renders on any dashboard; the suppression guard and provenance-coverage gate (from incidence-explorers-validate-008) tests remain green",
+    "WCAG 2.2 AA compliance is verified by automated accessibility scan and manual assistive-technology testing; results recorded",
+    "CI is green (build/test/lint); reviewed and signed off by the Maintainer and Statistics reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-stats-spec-004.json",
+    "tasks/incidence-explorers-stats-009.json",
+    "tasks/incidence-explorers-validate-008.json"
+  ],
+  "output": "A merged PR delivering WCAG 2.2 AA-compliant accessible dashboards (chart + text-table + ARIA) with inline caveat matrix caveats on every figure, suppression and provenance guards enforced, and automated + manual a11y verification recorded — the visual layer for incidence-explorers-eval-011 and the foundation for M3 explainer content.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "incidence-explorers-handoff-017",
+  "title": "Adoption: partner uses an explainer with its community; comprehension improvement recorded",
+  "project": "incidence-explorers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "epidemiology", "health-literacy", "data-governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This is the Definition of Shipped for incidence-explorers: a real beneficiary organisation uses the explainers with its community and people demonstrably read the statistics more correctly, with data/license/medical-safety guardrails independently verified. The project is not 'shipped' on merge — it ships when real beneficiaries adopt and benefit. This task records the closed-loop outcome. Depends on a secured beneficiary (incidence-explorers-partner-016). No partner is yet secured.",
+  "objective": "Close the deed loop: the secured partner (from incidence-explorers-partner-016) demonstrably uses at least one explainer with its community; a comprehension improvement is recorded using the instrument from incidence-explorers-readiness-015; the 'not medical advice' framing is upheld throughout community use; and the guardrails (data, license, medical-safety) are independently verified and the outcome is recorded by the steward.",
+  "acceptanceCriteria": [
+    "The partner demonstrably uses at least one explainer with its community (recorded by the steward with evidence of use)",
+    "A comprehension improvement is recorded using the before/after comprehension instrument from incidence-explorers-readiness-015; improvement is statistically meaningful or meets the pre-agreed threshold",
+    "'Not medical advice — talk to your care team' framing is upheld throughout community use; no advice/diagnosis/prognosis claims are made in partner materials",
+    "Guardrails are independently verified at the point of community use: aggregate-only sources, provenanced assertions, suppression honoured, oncologist + advocate sign-off confirmed, helplines verified",
+    "The outcome is recorded by the steward and constitutes the Definition of Shipped for the incidence-explorers project"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-partner-016.json",
+    "tasks/incidence-explorers-readiness-015.json",
+    "tasks/incidence-explorers-explainer-013.json"
+  ],
+  "output": "A steward-attested adoption record documenting that the partner used the explainer with its community, the comprehension improvement recorded, 'not medical advice' framing upheld, and guardrails independently verified — constituting the Definition of Shipped for incidence-explorers.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

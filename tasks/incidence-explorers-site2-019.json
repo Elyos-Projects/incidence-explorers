@@ -1,0 +1,33 @@
+{
+  "id": "incidence-explorers-site2-019",
+  "title": "Second cancer-site explainer pack",
+  "project": "incidence-explorers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "statistics", "health-literacy", "writing"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After M6 (sustain and refresh), the project may expand to a second cancer site. This is a backlog task: it is only started after the first site is stable, the ops runbook (incidence-explorers-ops-018) is operational, and the expansion process (documented in ops-018) is followed. Like the pilot site, any patient-facing explainer for a second cancer site requires full provenance and oncologist + patient-advocate sign-off before shipping. No second site, reviewer, or partner is yet identified.",
+  "objective": "Apply the full incidence-explorers pipeline to a second cancer site (to be selected using the same scored criteria as the pilot): ingest aggregate data with provenance, validate against the upstream tool, produce accessible dashboards with caveats, write a provenanced 'not medical advice'-framed explainer with verified helplines, obtain oncologist + patient-advocate sign-off, and ship through the documented expert-gated expansion process from incidence-explorers-ops-018.",
+  "acceptanceCriteria": [
+    "The second cancer site is selected using the same scored criteria as the pilot site (public-misinterpretation value, data availability, reviewer availability, tractable complexity) and the gated expansion process from incidence-explorers-ops-018 is followed",
+    "Full provenance is carried on every DataPoint for the second site; allow-list, suppression, and license-register gates are all green",
+    "Accessible dashboards with inline caveats (WCAG 2.2 AA) are produced for the second site",
+    "The explainer is provenanced, 'not medical advice'-framed, uses verified/dated helplines, passes the content-safety lint, and meets the plain-language readability target",
+    "Signed off by a credentialed oncologist AND a patient advocate (version-scoped, recorded) before shipping — blocking"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-ops-018.json",
+    "tasks/incidence-explorers-explainer-013.json"
+  ],
+  "output": "A second cancer-site explainer pack (dashboards + explainer + verified helplines) — fully provenanced, 'not medical advice'-framed, WCAG 2.2 AA, oncologist + advocate signed off — delivered through the expert-gated expansion process.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

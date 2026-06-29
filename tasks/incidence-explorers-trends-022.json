@@ -1,0 +1,35 @@
+{
+  "id": "incidence-explorers-trends-022",
+  "title": "Incidence-trend views with APC/AAPC + joinpoint caveats and screening-artifact flags",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "health-literacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A key misreading of cancer statistics is interpreting incidence trends as indicating change in true cancer risk when they may reflect screening coverage changes (screening artifacts). This backlog task adds incidence-trend views with Annual Percent Change (APC) and Average Annual Percent Change (AAPC) from joinpoint regression, with mandatory caveats about joinpoint methodology and mandatory screening-artifact flags where incidence trends are screening-sensitive. This overlaps with the sibling 'screening-coverage-trends' Elyos project. Statistics reviewer sign-off is required.",
+  "objective": "Implement incidence-trend views (APC/AAPC from published joinpoint analyses) for the pilot cancer site, with mandatory joinpoint-methodology caveats and screening-artifact flags on all screening-sensitive trend series. GLOBOCAN estimates are not used for short-term trend claims. Every DataPoint carries full provenance. The trends views integrate with the existing statistics-correctness layer (lib/stats) and the caveat matrix. Patterns from the sibling 'screening-coverage-trends' project should be reused.",
+  "acceptanceCriteria": [
+    "APC/AAPC trend views are implemented using published joinpoint analysis results (not novel modelling); every DataPoint carries full provenance",
+    "Mandatory joinpoint-methodology caveats are shown on all trend figures (e.g. joinpoint selection criteria, data vintage, the fact that short-term fluctuations can affect endpoints)",
+    "Screening-artifact flags are shown on all incidence-trend series for screening-sensitive cancer sites, explaining that rising incidence may reflect increased screening detection rather than increased true risk",
+    "GLOBOCAN estimates are not used for short-term trend claims (GLOBOCAN is cross-sectional modelled estimates, not longitudinal registry data)",
+    "CI and/or APC uncertainty are shown where the source publishes them",
+    "CI is green; reviewed and signed off by the Statistics reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-stats-spec-004.json",
+    "tasks/incidence-explorers-stats-009.json",
+    "tasks/incidence-explorers-dashboard-010.json"
+  ],
+  "output": "A merged PR adding incidence-trend views (APC/AAPC + joinpoint caveats + screening-artifact flags) integrated with the statistics-correctness layer, green CI, and statistics reviewer sign-off.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "incidence-explorers-license-006",
+  "title": "Per-source license verification + recorded attribution (SEER/USCS + GLOBOCAN/IARC terms)",
+  "project": "incidence-explorers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance", "licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The data-governance specification (incidence-explorers-governance-001) requires that each enabled data source has a recorded, verified reuse term, required attribution string, and any non-commercial/no-derivatives constraint before its data enters the pipeline. GLOBOCAN/GCO (IARC/WHO) terms must be verified before enabling GCO data; if terms forbid the intended reuse, that data is not shipped. SEER/USCS (U.S. federal) attribution and citation requirements must also be recorded. No source may be enabled without a verified license register entry (CI gate).",
+  "objective": "Verify and record the reuse terms for each enabled aggregate data source in the license register: (1) SEER*Explorer / NCI — confirm U.S. federal copyright status, attribution/citation requirements, and any redistribution terms; (2) USCS / CDC — confirm attribution, citation, and redistribution requirements; (3) GLOBOCAN / GCO (IARC/WHO) — verify the exact terms of use including any non-commercial condition, mandated citation, and derivative-work limits; if terms forbid the intended CC-BY-4.0 / non-commercial reuse, flag the data as not-enabled. Record each entry in the license register schema defined in governance-001.",
+  "acceptanceCriteria": [
+    "Each enabled source (SEER*Explorer/NCI, USCS/CDC, and GLOBOCAN/GCO if terms permit) has a recorded, verified reuse term, required attribution string, and any non-commercial/no-derivatives constraint in the license register",
+    "GLOBOCAN/GCO (IARC/WHO) terms are verified against the official IARC/GCO terms of use; if terms prohibit the intended reuse, GCO data is flagged as not-enabled and the reason is recorded",
+    "SEER*Explorer and USCS (CDC/NCI) attribution and citation requirements are verified against the official NCI/CDC terms and recorded",
+    "No source is enabled in the pipeline until its register entry is verified (CI gate blocks unverified sources)",
+    "Reviewed and signed off by the Data-governance reviewer and Maintainer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A completed, verified license register (per the schema from incidence-explorers-governance-001) with entries for SEER*Explorer/NCI, USCS/CDC, and GLOBOCAN/GCO (with a clear enabled/not-enabled flag and rationale for GCO based on the verified IARC terms) — the gate that allows incidence-explorers-ingest-007 to proceed.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
