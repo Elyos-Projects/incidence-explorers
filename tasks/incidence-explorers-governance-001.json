@@ -1,0 +1,35 @@
+{
+  "id": "incidence-explorers-governance-001",
+  "title": "Data-governance layer spec + source allow-list (aggregate-only) + license register",
+  "project": "incidence-explorers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance", "health-literacy", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Incidence-Explorers builds plain-language, accessible dashboards and explainers from AGGREGATE, open-access, de-identified cancer-incidence statistics (SEER*Explorer, GLOBOCAN/GCO, USCS). The binding cancer guardrails make the data boundary the headline gate: individual-level / case-level / controlled-access data is OUT OF SCOPE (SEER Research Data requires a signed DUA; CDC restricted-use files, record-level/biobank data, and any DUA/IRB source are excluded). Each source's license must be verified before its data is enabled, small-cell suppression must be honoured to prevent re-identification, and every rendered statistic must carry provenance. This cold-start task specifies and bounds that data-governance layer before any ingestion or feature is built. No partner organisation, beneficiary, or oncologist/advocate reviewer is yet secured.",
+  "objective": "Write the authoritative data-governance specification that all later ingestion and rendering code must implement and be tested against: the AGGREGATE-ONLY source allow-list and the explicit controlled-access exclusion list; the per-source license register (verified reuse term + required attribution + non-commercial/no-derivatives constraints, with GLOBOCAN/IARC terms flagged verify-before-enable); the provenance record (source, dataset release/version, exact query parameters, extraction date, URL/DOI, license, age-standard, measure); the 'no source, no render' rule; and the small-cell suppression / re-identification boundary.",
+  "acceptanceCriteria": [
+    "Defines an aggregate-only source allow-list (SEER*Explorer, GLOBOCAN/GCO, USCS incl. CDC WONDER public-use) and an explicit exclusion list (SEER Research Data/DUA, CDC restricted-use files, any record-level/individual-level/biobank data, any DUA/IRB-gated source), enforced at ingestion",
+    "Specifies the license-register schema: per source, the verified reuse term, required attribution string, and any non-commercial/no-derivatives constraint; an unverified source cannot be enabled (CI gate); GLOBOCAN/IARC terms flagged verify-before-enable",
+    "Specifies the provenance record (source, dataset release/version, exact query parameters, extraction date, URL/DOI, license, age-standard, measure) and the 'no source, no render' (citation-coverage) rule",
+    "Specifies the small-cell suppression / re-identification boundary: honour upstream suppression (e.g. counts based on fewer than 16 cases), never display or infer suppressed cells, block aggregations that could reconstruct one, fail-closed when cell size is unknown",
+    "States that no statistic is model-generated (numbers come only from ingested aggregate sources) and that patient-facing content is out of scope for this task (handled HIGH-tier with oncologist + advocate sign-off downstream)",
+    "Reviewed and signed off by the data-governance reviewer (recorded)"
+  ],
+  "resources": [
+    "planning/projects/incidence-explorers/PLAN.md",
+    "planning/ROADMAP.md",
+    "CLAUDE.md",
+    "docs/good-deed-definition.md",
+    "packages/schema/src/schemas.ts"
+  ],
+  "output": "A reviewed data-governance specification document (the aggregate-only allow-list + controlled-access exclusion list, the license-register schema with first entries and the GLOBOCAN-terms flag, the provenance-record schema with the 'no source, no render' rule, and the small-cell suppression / re-identification boundary) - the contract that incidence-explorers-suppression-005 (suppression guard), incidence-explorers-license-006 (license verification), and incidence-explorers-ingest-007 (ingestion + provenance) implement and are tested against.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
