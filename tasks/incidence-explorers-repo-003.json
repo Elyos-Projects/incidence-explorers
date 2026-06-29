@@ -1,0 +1,32 @@
+{
+  "id": "incidence-explorers-repo-003",
+  "title": "Monorepo + pnpm + TS/ESM + static-site + CI (build/test/lint) skeleton",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["software", "open-data", "health-literacy"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Incidence-Explorers needs an agent-neutral, TypeScript/ESM monorepo skeleton before any data pipeline, dashboard, or content work can begin. The repo must follow Elyos engineering conventions (pnpm workspaces, TS/ESM, MIT code license) and have green CI (build/test/lint) from the start. Static-first delivery is chosen to minimise the threat surface — the product holds no patient or restricted data. This is a pure infrastructure task with low risk and no patient-facing content.",
+  "objective": "Bootstrap the incidence-explorers monorepo: pnpm workspaces, TypeScript/ESM configuration, a static-site framework scaffold (Astro or Next.js static export), a CI pipeline running build/test/lint, and the package structure for lib/governance, lib/provenance, lib/stats, app/, and content/ as defined in PLAN.md. The skeleton must be agent-neutral (no vendor/agent-specific logic in core packages).",
+  "acceptanceCriteria": [
+    "Monorepo uses pnpm workspaces with TypeScript/ESM configuration per Elyos conventions",
+    "Static-site framework (Astro or Next.js static export) is scaffolded and builds successfully",
+    "CI pipeline runs build, test, and lint; all three pass on the initial skeleton",
+    "Package structure includes stubs for lib/governance, lib/provenance, lib/stats, app/, and content/ as defined in PLAN.md",
+    "No vendor/agent-specific logic in any core package (agent-neutral); no secrets, tokens, or PII in committed files",
+    "Code licensed MIT; reviewed and merged by the Maintainer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "CLAUDE.md"
+  ],
+  "output": "A merged PR containing the pnpm/TS/ESM/static-site monorepo skeleton with green CI (build/test/lint), the correct package structure, and no vendor-specific or secrets-containing content — the foundation on which all later code tasks build.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "incidence-explorers-eval-011",
+  "title": "Eval gates: provenance + caveat coverage + suppression + content-safety lint (CI)",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "data-governance", "health-literacy"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "With the statistics-correctness layer (incidence-explorers-stats-009) and accessible dashboards (incidence-explorers-dashboard-010) built, the project needs a comprehensive eval/quality harness in CI to enforce all safety, provenance, caveat, suppression, and content-safety rules as automated gates. A failing gate must fail the build. This harness protects against regressions and enables M3 patient-facing content to be built on top of a reliably clean foundation.",
+  "objective": "Implement the eval/quality harness (scripts/eval.ts) as CI gates: (1) provenance coverage — 100% of rendered statistics resolve to a Source; (2) caveat coverage — 100% of figures show the mandatory caveats from the per-figure caveat matrix; (3) suppression safety — 0 suppressed or <16-case values reach the render layer; (4) content-safety lint — 0 advice/diagnosis/prognosis phrasings in any content. All four gates must fail CI when violated.",
+  "acceptanceCriteria": [
+    "Provenance-coverage gate: 100% of rendered statistics carry a resolvable Source; a statistic without a source fails CI",
+    "Caveat-coverage gate: 100% of figures carry the required caveats per the caveat matrix (counts-vs-rates, age-standardisation + standard pop, CI/estimate uncertainty, screening artifact where relevant, registry lag); missing caveats fail CI",
+    "Suppression-safety gate: 0 suppressed or <16-case values can reach the rendering layer; any suppressed value passing through fails CI",
+    "Content-safety lint gate: 0 advice/diagnosis/prognosis/individual-risk phrasings in any content; any such phrasing fails CI",
+    "All four gates are wired into CI and fail the build on violation; a failing gate cannot be bypassed silently",
+    "CI is green (build/test/lint); reviewed and signed off by the Data-governance reviewer and Statistics reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-stats-spec-004.json",
+    "tasks/incidence-explorers-stats-009.json",
+    "tasks/incidence-explorers-dashboard-010.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A merged PR implementing the four-gate eval/quality harness (provenance coverage, caveat coverage, suppression safety, content-safety lint) as CI gates that fail the build on violation — the quality enforcement layer required before M3 patient-facing content investment.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "incidence-explorers-stats-spec-004",
+  "title": "Statistical-honesty spec + per-figure caveat matrix + 'not medical advice' framing spec",
+  "project": "incidence-explorers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer", "epidemiology", "statistics", "health-literacy", "data-governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Incidence-Explorers presents aggregate cancer statistics to a non-specialist audience where misreading is common and harmful (screening artifacts read as rising risk, counts confused with rates, GLOBOCAN modelled estimates treated as exact tallies, age-standardised rates compared across incompatible standard populations). This cold-start spec defines the statistical-honesty rules and the mandatory per-figure caveat matrix that all dashboards and explainers must implement and be tested against. It also defines the 'not medical advice' framing requirement for any patient-facing surface. No partner is yet secured.",
+  "objective": "Write the authoritative statistical-honesty specification that all statistics-correctness code, dashboards, and explainer content must implement and be tested against: typed measures (incidence/mortality/prevalence/survival), counts-vs-rates rules, age-standardisation metadata and the standard-population comparability rule (no co-plotting US-2000 vs World standards without a caveat), CI/estimate-uncertainty handling (GLOBOCAN = modelled estimates with uncertainty, not exact counts), the per-figure caveat matrix (counts-vs-rates, age-standardisation + standard pop, CI/uncertainty, screening artifact, registry lag), and the 'not medical advice — talk to your care team' framing requirement with no-causal-claims and descriptive-disparities rules.",
+  "acceptanceCriteria": [
+    "Defines typed measures: incidence, mortality, prevalence, survival — with rules distinguishing each and preventing conflation (counts vs rates, relative survival vs absolute)",
+    "Defines the age-standardisation standard-population comparability rule: no co-plotting US 2000 Standard vs World (Segi/Doll) or other incompatible standards on the same axis without an explicit labelled caveat",
+    "Defines CI/estimate-uncertainty handling: GLOBOCAN rendered as modelled estimates with uncertainty, never as exact counts; CIs shown where the source publishes them; short-term trend claims blocked for GLOBOCAN",
+    "Specifies the per-figure caveat matrix: maps each figure type to its mandatory caveats — counts-vs-rates, age-standardisation + standard population, CI/estimate uncertainty, screening/diagnostic artifact (where incidence is screening-sensitive), and registry lag/data vintage",
+    "Defines the 'not medical advice — talk to your care team' framing requirement: no diagnosis, prognosis, individual-risk, screening, or treatment guidance; no causal/etiological claims; disparities presented descriptively with structural context only",
+    "Reviewed and signed off by the Statistics reviewer and Maintainer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "CLAUDE.md"
+  ],
+  "output": "A reviewed statistical-honesty specification document (typed measures, counts-vs-rates rules, age-standardisation comparability rule, CI/estimate-uncertainty handling, per-figure caveat matrix, and 'not medical advice' framing requirement) — the contract that incidence-explorers-stats-009 (statistics-correctness layer), incidence-explorers-dashboard-010 (dashboards), and incidence-explorers-eval-011 (eval gates) implement and are tested against.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "incidence-explorers-readiness-015",
+  "title": "Full eval + readability + a11y verification + comprehension instrument + adoption runbook",
+  "project": "incidence-explorers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "epidemiology", "statistics", "software", "health-literacy", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "With all M3 content (incidence-explorers-literacy-012, incidence-explorers-explainer-013, incidence-explorers-helplines-014) and the eval harness (incidence-explorers-eval-011) complete, the project needs a comprehensive readiness verification pass before beneficiary handoff. This task assembles the final quality evidence, the comprehension-measurement instrument, and the adoption runbook that will allow a beneficiary organisation to onboard and use the explainers. No partner is yet secured.",
+  "objective": "Conduct a full readiness verification: (1) run all eval gates (provenance, caveat, suppression, content-safety, helpline verification, readability, a11y) and confirm green; (2) verify plain-language readability target met across all content; (3) confirm WCAG 2.2 AA on all dashboards/explainers via automated scan + manual AT testing; (4) co-design (or draft for co-design with the future partner) a credible before/after comprehension instrument that collects no privacy-sensitive end-user data; (5) write an adoption/onboarding runbook for a beneficiary organisation.",
+  "acceptanceCriteria": [
+    "All eval gates are green: provenance coverage 100%, caveat coverage 100%, suppression safety 0 violations, content-safety lint 0 violations, helpline verification 100%, plain-language readability target met, WCAG 2.2 AA verified",
+    "A credible before/after comprehension instrument is drafted (co-designed or ready for co-design with the partner): it measures whether a reader interprets a sample statistic more correctly after using an explainer, and collects no privacy-sensitive end-user data",
+    "An adoption/onboarding runbook for a beneficiary organisation is written: covers what the partner needs to embed/use an explainer with their community",
+    "Plain-language review is passed across all user-facing content",
+    "Manual assistive-technology testing is completed and results recorded; WCAG 2.2 AA confirmed",
+    "Reviewed and signed off by the Maintainer, Statistics reviewer, and Expert (oncologist + patient advocate) (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-eval-011.json",
+    "tasks/incidence-explorers-literacy-012.json",
+    "tasks/incidence-explorers-explainer-013.json"
+  ],
+  "output": "A merged PR containing the readiness verification report (all gates green), the comprehension instrument, and the adoption runbook — proof that the project is ready for a real beneficiary partner and the Definition of Shipped in M5.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

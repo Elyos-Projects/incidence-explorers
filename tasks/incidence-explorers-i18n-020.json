@@ -1,0 +1,35 @@
+{
+  "id": "incidence-explorers-i18n-020",
+  "title": "Internationalisation + community translations of explainers",
+  "project": "incidence-explorers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "health-literacy", "writing", "accessibility"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "After the English explainers are stable and delivered, the project may produce translated versions for other languages. Each translation is HIGH risk-tier because the content is patient-facing: per-language plain-language review and expert review are required, and helplines must be region-correct for the target language/region. Translations must not introduce medical claims or framing errors absent from the source. No target language, reviewer, or partner for a translated version is yet identified. This is a backlog task.",
+  "objective": "Internationalise the explainer codebase (i18n infrastructure) and produce community translations of at least one explainer: each translation undergoes per-language plain-language review and expert review (oncologist + advocate for the target language/region), uses region-correct and region-appropriate helplines verified against official sources for that region, and maintains the 'not medical advice — talk to your care team' framing accurately in the target language. Translations are not shipped without expert sign-off.",
+  "acceptanceCriteria": [
+    "i18n infrastructure is implemented in the codebase: per-language content files, language switching, and localised helpline sets",
+    "Each translation is reviewed by a per-language plain-language reviewer for accuracy and reading level",
+    "Each translated patient-facing explainer is signed off by a credentialed oncologist AND a patient advocate for the target language/region before shipping — blocking",
+    "Helplines in each translated version are region-correct and language-appropriate for the target audience, verified against official sources for that region, and carry lastVerified dates",
+    "'Not medical advice — talk to your care team' framing is accurately translated and present on all patient-facing surfaces in the target language",
+    "Content-safety lint passes for the translated content"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-explainer-013.json",
+    "tasks/incidence-explorers-helplines-014.json",
+    "tasks/incidence-explorers-ops-018.json"
+  ],
+  "output": "Translated explainer(s) in at least one non-English language — per-language plain-language reviewed, expert signed off (oncologist + advocate for the target region), with region-correct verified helplines and accurate 'not medical advice' framing — delivered via the i18n-enabled explainer platform.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

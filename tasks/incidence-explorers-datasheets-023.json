@@ -1,0 +1,34 @@
+{
+  "id": "incidence-explorers-datasheets-023",
+  "title": "Datasheets for the derived published datasets (provenance + license)",
+  "project": "incidence-explorers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "open-data", "data-governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Incidence-explorers publishes derived datasets (aggregated, provenanced statistics under CC-BY-4.0). Each published dataset needs a datasheet documenting its provenance, licensing, methodology, known limitations, and how to cite it correctly. This follows the 'Datasheets for Datasets' pattern and the patterns from the sibling 'cancer-dataset-datasheets' and 'open-data-datasheets' Elyos projects. Datasheets enable downstream users to correctly attribute, cite, and understand the limitations of the published data.",
+  "objective": "Write datasheets for each derived published dataset produced by incidence-explorers: documenting the provenance (upstream sources, dataset versions, query parameters, extraction dates), the license (CC-BY-4.0 with upstream attribution strings preserved per the license register), methodology (how aggregate statistics were ingested and validated), known limitations (suppressed values, GLOBOCAN modelled-estimate status, registry lag, age-standardisation standards used), and how to cite the dataset correctly. Reuse patterns from the sibling 'cancer-dataset-datasheets' / 'open-data-datasheets' Elyos projects.",
+  "acceptanceCriteria": [
+    "A datasheet is produced for each derived published dataset; the datasheet follows the 'Datasheets for Datasets' format and reuses patterns from the sibling cancer-dataset-datasheets / open-data-datasheets projects",
+    "Each datasheet documents provenance (upstream sources, dataset version, query parameters, extraction date, URL/DOI), license (CC-BY-4.0 with upstream attribution strings), and methodology",
+    "Each datasheet documents known limitations: suppressed values (cells based on <16 cases), GLOBOCAN estimates as modelled (not exact counts), registry lag, and age-standardisation standard(s) used",
+    "Each datasheet includes a correct citation format for the published dataset",
+    "Reviewed and signed off by the Data-governance reviewer"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-ingest-007.json",
+    "tasks/incidence-explorers-license-006.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A set of datasheets for each derived published dataset — provenance, license, methodology, limitations, and citation — following the 'Datasheets for Datasets' pattern and reviewed by the data-governance reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

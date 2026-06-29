@@ -1,0 +1,33 @@
+{
+  "id": "incidence-explorers-partner-016",
+  "title": "Secure beneficiary/steward + independent guardrail audit (data/license/medical-safety)",
+  "project": "incidence-explorers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer", "epidemiology", "health-literacy", "data-governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This is the M5 gate: the project does not publish into a vacuum. A real beneficiary organisation (advocacy org, library/health-literacy program, public-health team, or newsroom) must be secured and a steward assigned before the explainers are released. An independent guardrail audit must confirm that all data, license, and medical-safety requirements are met. The dated partner-acquisition plan sets a decision deadline of 2027-03-31: if no beneficiary is secured by then, apply the build-vs-mothball/pivot rule. No partner is yet secured (verifiedNeed: false).",
+  "objective": "Secure a real beneficiary/partner organisation (advocacy, library/health-literacy, public-health, or newsroom) and assign a steward; obtain an independent guardrail audit confirming: only aggregate/open-access sources are used (allow-list), each license is verified, every assertion is provenanced, suppression is honoured, all patient-facing content is oncologist + advocate signed off and 'not medical advice'-framed, and helplines are verified. If no beneficiary is secured by 2027-03-31, apply the build-vs-mothball/pivot rule and record the outcome in governance.",
+  "acceptanceCriteria": [
+    "A real beneficiary organisation (advocacy / library-health-literacy / public-health / newsroom) is formally secured with a named steward; verifiedNeed flips to true and is recorded in governance",
+    "An independent audit confirms: only aggregate/open-access sources used (allow-list green), each license verified and recorded, every assertion provenanced (provenance-coverage test green), suppression honoured (0 violations), all patient-facing content oncologist + advocate signed off and 'not medical advice'-framed, and helplines verified and dated",
+    "If no beneficiary is secured by 2027-03-31, the build-vs-mothball/pivot rule is applied and the outcome (pivot to OER/health-literacy commons or mothball) is recorded in governance — the project does not publish into a vacuum",
+    "Reviewed and signed off by the Steward, Expert (oncologist + advocate), and Data-governance reviewer (recorded)"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-explainer-013.json",
+    "tasks/incidence-explorers-readiness-015.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "A document recording the secured beneficiary organisation, named steward, independent guardrail audit findings (all gates green), and the verifiedNeed=true flip — or, if the partner-acquisition deadline is missed, the recorded build-vs-mothball/pivot decision and rationale.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "incidence-explorers-disparities-021",
+  "title": "Descriptive disparities views (structural-context framing, no causal/essentialist claims)",
+  "project": "incidence-explorers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer", "epidemiology", "statistics", "health-literacy", "data-governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Cancer incidence and mortality data often show variation across demographic groups. Presenting these disparities requires extreme care: framing must be descriptive only with structural context, making no causal or etiological claims and avoiding any narrative that attributes outcomes to inherent group traits. This is HIGH risk because disparity framing that assigns outcomes to inherent traits causes harm and discrimination. This backlog task overlaps with the sibling 'disparities-analysis' Elyos project and should reuse patterns from it. No reviewer or partner is yet secured.",
+  "objective": "Produce descriptive disparities views for the pilot cancer site's aggregate data: the data is presented descriptively with structural-context framing, no causal or etiological claims, and no attribution of disparities to inherent group traits. Every disparities DataPoint carries full provenance. Views are reviewed by the patient advocate and statistics reviewer before shipping. Patterns from the sibling 'disparities-analysis' Elyos project should be reused where applicable.",
+  "acceptanceCriteria": [
+    "Disparities data is presented descriptively with explicit structural-context framing; no causal, etiological, or group-essentialist claims are made",
+    "Every DataPoint in the disparities views carries a complete provenance record; provenance-coverage gate remains green",
+    "Suppression is honoured end-to-end: small-cell / <16-case values in demographic breakdowns are suppressed; aggregations that could reconstruct suppressed cells are blocked",
+    "Content-safety lint passes: 0 causal/essentialist phrasings detected; only descriptive, structural-context framing is present",
+    "Reviewed and signed off by the patient advocate and statistics reviewer before shipping; any disputed framing is resolved in favour of the advocate's veto"
+  ],
+  "resources": [
+    "PLAN.md",
+    "TASKS.md",
+    "tasks/incidence-explorers-ingest-007.json",
+    "tasks/incidence-explorers-stats-009.json",
+    "tasks/incidence-explorers-governance-001.json"
+  ],
+  "output": "Descriptive disparities views (dataset + dashboard) for the pilot cancer site — structurally-framed, no causal/essentialist claims, fully provenanced, suppression honoured, and reviewed by the patient advocate and statistics reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
